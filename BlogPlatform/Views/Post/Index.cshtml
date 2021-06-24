@@ -1,0 +1,10 @@
+﻿@model IEnumerable<BlogPlatform.Models.Post>
+
+    <h2>Post List</h2>
+    <hr />
+    <ul>
+        @foreach (var post in Model)
+        {
+            <li><a href="/Post/Details/@post.Id">@post.Title</a></li>
+        }
+    </ul>

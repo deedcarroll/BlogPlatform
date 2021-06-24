@@ -1,0 +1,20 @@
+﻿@model IEnumerable<BlogPlatform.Models.Comment>
+
+@section styles{
+    <link rel="stylesheet" href="" />
+}
+
+
+<h1>Post Views</h1>
+<hr />
+<ul>
+    @foreach (var content in Model)
+    {
+        <li><a href="/Content/Details/@content.Id">@content.Name</a></li>
+
+    }
+</ul>
+
+@section scripts{
+    <script></script>}
+

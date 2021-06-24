@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="" />
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div>
+        <h1>THE VIBE ON AIR<img src ="/images/the vibe on air.jpg" style = "width: 200px"/></h1>
+        <nav>
+            <ul>
+                <li><a href="/POST/">Post List</a></li>
+                <li><a href="/COMMENT/">Comment List</a></li>
+            </ul>
+        </nav>
+        <hr />
+        @RenderBody()
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

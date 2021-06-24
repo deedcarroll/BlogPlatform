@@ -1,0 +1,24 @@
+﻿@model BlogPlatform.Models.Post
+@{
+    ViewBag.Title = "Postt Details - " + Model.Title;
+}
+
+<h1>Comment Details</h1>
+<hr />
+<h4> Postt ID: @Model.Id</h4>
+<h4>Postt Name: @Model.Title</h4>
+<h4>Post Description: @Model.Body</h4>
+@*<img src="@Model.Image" alt="Photo of @Model.Name" style="width:300px" />*@
+<hr />
+<h4>Taco Reviews</h4>
+@foreach (var Comment in Model.Comments)
+{
+    <p>@Comment.Content</p>
+    <p>- @Comment.Name</p>
+}
+@if (Model.Comments.Count == 0)
+{
+    <p>No comments for this post yet!</p>
+}
+
+<a href="/Comment/Create/@Model.Id">Add a Coment</a>
