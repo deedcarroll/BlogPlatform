@@ -1,6 +1,10 @@
 ﻿
 @model BlogPlatform.Models.Comment
 
+@{
+    ViewBag.Title = "Post Details - " + Model.Content;
+}
+
 
 <!DOCTYPE html>
 
@@ -10,15 +14,18 @@
     <title>Post Detail</title>
 </head>
 <body>
-    <h1>Post</h1>
+    <h1>Comments</h1>
     <hr />
     <h4> Comment ID: @Model.Id</h4>
     <h4>Comment Name: @Model.Name</h4>
     <hr />
-    <h4>My Post</h4>
-   
+    <h4>My Comment</h4>
+    <h4>@Model.Content</h4>
+    <a href="/Comment/Update/@Model.Id"><button>Edit Review</button></a>
+    <a href="/Comment/Delete/@Model.Id"><button>Delete Review</button></a>
 
-    
+
+
 </body>
 </html>
 

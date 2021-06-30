@@ -4,20 +4,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="/styles/StyleSheet.css" />
     @RenderSection("styles", required: false)
 </head>
 <body>
     <div>
-        <h1>THE VIBE ON AIR<img src ="/images/the vibe on air.jpg" style = "width: 200px"/></h1>
-        <nav>
-            <ul>
-                <li><a href="/POST/">Post List</a></li>
-                <li><a href="/COMMENT/">Comment List</a></li>
-            </ul>
-        </nav>
+        <div class="page-top">
+            <h1 class="header">THE VIBE ON AIR</h1>
+            <center>
+                <video width="520" height="300" autoplay muted loop>
+                    <source src="~/images/video-1609783919.mp4" type="video/mp4">
+                    @*<source src="movie.ogg" type="video/ogg">*@
+                    Your browser does not support the video tag.
+                </video>
+            </center>
+            <nav>
+                <ul>
+                    <li><a href="/POST/">POST LIST</a></li>
+                    <li><a href="/COMMENT/">COMMENT LIST</a></li>
+                </ul>
+            </nav>
+        </div>
         <hr />
-        @RenderBody()
+        <div class="main">
+            @RenderBody()
+        </div>
     </div>
     @RenderSection("scripts", required: false)
 </body>

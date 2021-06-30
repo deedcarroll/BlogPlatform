@@ -52,5 +52,20 @@ namespace BlogPlatform.Controllers
 		{
 			return View(postRepo.GetByID(id));
 		}
+
+		public IActionResult Delete(int id)
+
+		{
+			Post post = postRepo.GetByID(id);
+			return View(post);
+		}
+
+		[HttpPost]
+		public IActionResult Delete(Post obj)
+		{
+			postRepo.Delete(obj);
+
+			return RedirectToAction("Index");
+		}
 	}
 }

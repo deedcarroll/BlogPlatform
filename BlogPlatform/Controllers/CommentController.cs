@@ -26,7 +26,7 @@ namespace BlogPlatform.Controllers
             return View(commentRepo.GetByID(id));
         }
 
-        public IActionResult Create(int id)//product id
+        public IActionResult Create(int id)
         {
             Post PostToComment = commentRepo.GetPostById(id);
             ViewBag.Post = PostToComment;
@@ -52,9 +52,9 @@ namespace BlogPlatform.Controllers
         public IActionResult Update(Comment comment)
         {
             commentRepo.Update(comment);
-            ViewBag.ResultMessage = "Review Updated.";
+            ViewBag.ResultMessage = "Comment Updated.";
             return RedirectToAction("Details", new { id = comment.Id });
-            //return View(review);
+            
         }
 
         public IActionResult Delete(int id)

@@ -4,14 +4,16 @@ using BlogPlatform;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20210629162917_fixedvideoembed")]
+    partial class fixedvideoembed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,7 +85,7 @@ namespace BlogPlatform.Migrations
                             Id = 1,
                             Author = "Pearl De'Chef",
                             Body = "body1",
-                            Link = "https://youtube.com/embed/VkdND06ZY4k",
+                            Link = "https://youtu.be/embed/VkdND06ZY4k",
                             PublishDate = new DateTime(2021, 4, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "The Vibe On Air Ep 1"
                         },
@@ -92,18 +94,18 @@ namespace BlogPlatform.Migrations
                             Id = 2,
                             Author = "Ritchie Carlyle",
                             Body = "body2",
-                            Link = "https://youtube.com/embed/zTF7LcpWhkI",
+                            Link = "https://youtu.be/embed/zTF7LcpWhkI",
                             PublishDate = new DateTime(2021, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "The Vibe On Air Ep 2"
+                            Title = "THe Vibe On Air Ep 2"
                         },
                         new
                         {
                             Id = 3,
-                            Author = "R&B GroupTwice",
+                            Author = "Author3",
                             Body = "body3",
-                            Link = "https://www.youtube.com/embed/Kh8-ekuRmoI",
-                            PublishDate = new DateTime(2021, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "The Vibe On Air Ep 3"
+                            Link = "https://www.youtube.com",
+                            PublishDate = new DateTime(2021, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "The Vibe On air Ep 3"
                         });
                 });
 

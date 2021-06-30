@@ -9,18 +9,27 @@
 
 <hr />
 <div class="row">
+    @*//Use Viewbag to display post info*@
+    <h3>@ViewBag.Post.Title</h3>
+
+</div>
+
+<div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <input type="hidden" asp-for="Id" value="0" />
+            <input type="hidden" asp-for="PostId" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="PostId" class="control-label"></label>
-                <select asp-for="PostId" class ="form-control" asp-items="ViewBag.PostId"></select>
-            </div>
+                <select asp-for="PostId" class="form-control" asp-items="ViewBag.PostId"></select>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Content" class="control-label"></label>
                 <input asp-for="Content" class="form-control" />

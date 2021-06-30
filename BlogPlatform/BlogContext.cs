@@ -24,9 +24,9 @@ namespace BlogPlatform
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Post>().HasData(
-                new Post(1,"The Vibe On Air Ep 1", "https://youtu.be/VkdND06ZY4k", "body1", "Author1", new DateTime(2021,03,01)),
-                new Post(2,"THe Vibe On Air Ep 2", "https://www.youtube.com","body2", "Author2", new DateTime(2021,03,02)),
-                new Post(3,"The Vibe On air Ep 3", "https://www.youtube.com","body3", "Author3", new DateTime(2021,03,03))
+                new Post(1,"The Vibe On Air Ep 1", "https://youtube.com/embed/VkdND06ZY4k", "body1", "Pearl De'Chef", new DateTime(2021,04,29)),
+                new Post(2,"The Vibe On Air Ep 2", "https://youtube.com/embed/zTF7LcpWhkI", "body2", "Ritchie Carlyle", new DateTime(2021,04,22)),
+                new Post(3,"The Vibe On Air Ep 3", "https://www.youtube.com/embed/Kh8-ekuRmoI", "body3", "R&B GroupTwice", new DateTime(2021,03,04))
 
                 );
 
