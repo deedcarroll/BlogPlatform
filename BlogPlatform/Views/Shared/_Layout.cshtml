@@ -2,6 +2,8 @@
 
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Londrina Shadow' rel='stylesheet'>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="/styles/StyleSheet.css" />
@@ -10,26 +12,33 @@
 <body>
     <div>
         <div class="page-top">
-            <h1 class="header">THE VIBE ON AIR</h1>
-            <center>
-                <video width="520" height="300" autoplay muted loop>
-                    <source src="~/images/video-1609783919.mp4" type="video/mp4">
-                    @*<source src="movie.ogg" type="video/ogg">*@
-                    Your browser does not support the video tag.
-                </video>
-            </center>
+            <div class="image-box">
+                <h1 class="header">THE VIBE ON AIR</h1>
+                <div class="videoContainer center">
+                    <video width=720 height=360 autoplay muted loop>
+                        <source src="~/images/video-1609783919.mp4" type="video/mp4">
+                        @*<source src="movie.ogg" type="video/ogg">*@
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                @*</center>*@
+            </div>
             <nav>
                 <ul>
-                    <li><a href="/POST/">POST LIST</a></li>
-                    <li><a href="/COMMENT/">COMMENT LIST</a></li>
+                    <li><a href="/POST/"><button>POST LIST</button></a></li>
+                    <li><a href="/COMMENT/"><button>COMMENT LIST</button></a></li>
                 </ul>
             </nav>
         </div>
         <hr />
         <div class="main">
+
             @RenderBody()
         </div>
+        <footer>THE VIBE ON AIR 2021</footer>
     </div>
     @RenderSection("scripts", required: false)
+    
+
 </body>
 </html>

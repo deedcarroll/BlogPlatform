@@ -2,7 +2,7 @@
 @model BlogPlatform.Models.Comment
 
 @{
-    ViewBag.Title = "Post Details - " + Model.Content;
+    ViewBag.Title = "Comment Details - " + Model.Content;
 }
 
 
@@ -11,10 +11,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Post Detail</title>
+    <title>Comment Detail</title>
 </head>
 <body>
-    <h1>Comments</h1>
+    <h1>Comment Detail</h1>
     <hr />
     <h4> Comment ID: @Model.Id</h4>
     <h4>Comment Name: @Model.Name</h4>

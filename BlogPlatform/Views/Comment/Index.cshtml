@@ -5,15 +5,17 @@
 }
 
 
-<h1>Post Views</h1>
+<h1>Comments</h1>
 <hr />
-<ul>
-    @foreach (var content in Model)
-    {
-        <li><a href="/Comment/Details/@content.Id">@content.Name</a></li>
+<div class="comments">
+    <ul>
+        @foreach (var content in Model)
+        {
+            <li><a href="/Comment/Details/@content.Id">@content.Name</a></li>
 
-    }
-</ul>
+        }
+    </ul>
+</div>
 
 @section scripts{
     <script></script>}
